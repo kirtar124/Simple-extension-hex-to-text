@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hex to Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      margin: 15px;
+      padding: 0;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h3 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    #hty {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+    #openHistoryBtn {
+      background-color: #6c757d; /* Neutral gray for history button */
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background-color 0.3s;
+    }
+    #openHistoryBtn:hover {
+      background-color: #5a6268; /* Darker gray on hover */
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      background-color: #2c2c2c;
+      border: 1px solid #3c3c3c;
+      color: #e0e0e0;
+      border-radius: 3px;
+      padding: 5px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    #convertBtn {
+      background-color: #007bff; /* Blue for convert action */
+    }
+    #convertBtn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+    }
+    #copyBtn {
+      background-color: #6c757d; /* Neutral gray */
+    }
+    #copyBtn:hover {
+      background-color: #5a6268; /* Darker gray on hover */
+    }
+    #saveBtn {
+      background-color: #28a745; /* Green for save action */
+    }
+    #saveBtn:hover {
+      background-color: #218838; /* Darker green on hover */
+    }
+    #openLinkBtn {
+      display: none;
+      background-color: #4CAF50; /* Green for open link */
+      color: white;
+    }
+    #openLinkBtn:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+    #result {
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <h3>Hex to Text</h3>
+  <div id="hty">
+    <button id="openHistoryBtn">🕘 View History</button>
+  </div>
+  <textarea id="hexInput" placeholder="Enter hex string..."></textarea>
+  <button id="convertBtn">Convert</button>
+  <textarea id="result" readonly placeholder="Kết quả sẽ hiển thị ở đây..."></textarea>
+  <button id="copyBtn">Copy Result</button>
+  <button id="saveBtn">Save</button>
+  <button id="openLinkBtn">Open Link</button>
+  
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
